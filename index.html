@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+
+            background-color: black;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .cont {
+            display: flex;
+            justify-content: center;
+            height: 840px;
+            width: 680px;
+            border: 2px solid white;
+            border-radius: 11px;
+            background: linear-gradient(to right, rgb(23, 15, 15), rgb(148, 149, 148));
+            position: relative;
+            overflow: hidden;
+
+
+
+
+        }
+
+        .head {
+            width: 80%;
+            height: 16%;
+            /* border: 1px solid white; */
+            text-align: center;
+            position: absolute;
+            top: 5%;
+
+        }
+
+        .head h1 {
+            font-size: 30px;
+
+
+        }
+
+        .form {
+            width: 65%;
+            height: 48%;
+            position: absolute;
+            top: 20%;
+            display: flex;
+            justify-content: center;
+
+
+
+
+        }
+
+        .input_group {
+            display: flex;
+            gap: 16px;
+            font-size: 20px;
+
+        }
+
+        .units {
+            padding: 25px;
+            /* text-align: center; */
+        }
+
+        .ftoc,
+        .ctof {
+            font-size: 13px;
+        }
+
+        .but {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        button {
+            font-size: 13px;
+            width: 200px;
+            height: 45px;
+            border-radius: 15px;
+            background-color: rgb(153, 150, 150);
+            border: 1px solid black;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            background-color: rgb(189, 189, 164);
+            transition: background 0.4s;
+
+        }
+
+        button:active {
+            transform: translate(0em, 0.2em);
+        }
+
+        .answer {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            height: 30%;
+            width: 80%;
+            bottom: 12%;
+            left: 5%;
+            text-align: center;
+        }
+
+        .answer h1 {
+            font-size: 35px;
+        }
+
+        .answer .conv_answer {
+            color: aliceblue;
+            font-size: 16px;
+            font-weight: 900;
+            position: absolute;
+            left: 77%;
+            bottom: 80%;
+
+
+        }
+
+        .images {
+            position: absolute;
+            bottom: 6%;
+        }
+
+        .cold {
+            display: none;
+
+
+        }
+
+        .hot {
+            display: none;
+        }
+
+        .normal {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="head">
+            <h1>TEMPERATURE CONVERTER</h1>
+        </div>
+
+        <div class="form">
+            <form action="">
+                <div class="input_group">
+                    <label class="tempinput" for="temp">Enter the value:</label>
+                    <input required="" class="labeltempinput" id="temp" type="number">
+
+
+                </div>
+                <div class="units">
+                    <h2>Select Conversion Units : </h2>
+                    <div class="ctof">
+                        <input name="conversion" type="radio" id="tofarenheit">
+                        <label for="tofarenheit">Celcius to Farenheit</label>
+
+                    </div>
+                    <div class="ftoc">
+                        <input name="conversion" type="radio" id="tocelcius">
+                        <label for="tocelcius">Farenheit to Celcius</label>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="but">
+                    <button type="button" id="convertButton">
+                        CONVERT
+
+                    </button>
+
+                </div>
+
+
+
+
+
+            </form>
+
+
+        </div>
+        <div class="answer">
+            <p>
+            <h2>Your Answer Is:</h2>
+            </p>
+            <p class="conv_answer" id="ANSWER">
+
+            </p>
+
+
+
+
+
+        </div>
+        <div class="images">
+            <img src="https://media1.tenor.com/m/5Cl7q5ia7RcAAAAC/elmo-elmos-fire.gif" alt="hot" id="hot" class="hot"
+                style="width: 402px; height: 220px;">
+            <img src="https://media1.tenor.com/m/JY5Ozc2mQYMAAAAC/frozen-freezing.gif" alt="cold" id="cold" class="cold"
+                style="width: 402px; height: 220px;">
+            <img src="https://media1.tenor.com/m/eTbJr4AB0pYAAAAd/a-normal-day-chick.gif" alt="normal" id="normal"
+                class="normal" style="width: 402px; height: 220px;">
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="script.js">
+        
+
+    </script>
+</body>
+
+</html>
